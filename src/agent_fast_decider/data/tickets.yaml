@@ -1,0 +1,245 @@
+# Labeled support-ticket benchmark set (fictional company: Prairie Goods Co.,
+# an online retailer). 40 tickets, hand-labeled by the author.
+# Fields: id, subject, body, gold_route (billing|technical|returns|sales),
+# gold_urgent (bool), gold_frustration (0=calm, 1=frustrated, 2=very frustrated).
+# These tickets are synthetic — no real customer data.
+- id: T01
+  subject: "Charged twice for order #4812"
+  body: "Hi, I checked my bank statement and I was charged twice for order 4812, $86.40 each time. Please refund the duplicate charge. Thanks."
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 0
+- id: T02
+  subject: "Website checkout keeps failing"
+  body: "I have tried to check out three times today and every time the page errors out at the payment step. I need this order placed today, my card is fine. This is very frustrating."
+  gold_route: technical
+  gold_urgent: true
+  gold_frustration: 1
+- id: T03
+  subject: "Return label for damaged lamp"
+  body: "The table lamp I received arrived with a cracked base. I'd like to return it for a replacement, please send me a return label."
+  gold_route: returns
+  gold_urgent: false
+  gold_frustration: 0
+- id: T04
+  subject: "Do you carry this in walnut?"
+  body: "Hello, I love the oak bookshelf on your site. Do you carry the same one in a walnut finish? If so, what is the price? Thanks!"
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T05
+  subject: "URGENT: store system down, can't take orders"
+  body: "Our point of sale has been down since 8am and we cannot take any orders. We have a line of customers waiting. Please help immediately, this is costing us sales every minute."
+  gold_route: technical
+  gold_urgent: true
+  gold_frustration: 2
+- id: T06
+  subject: "Refund still not received after 2 weeks"
+  body: "I returned my order two weeks ago and the refund still has not shown up on my card. I called last week and was told it was processing. This is unacceptable, I need my $120 back now."
+  gold_route: billing
+  gold_urgent: true
+  gold_frustration: 2
+- id: T07
+  subject: "Wrong item delivered"
+  body: "I ordered the blue throw pillows but received green ones instead. I would like to exchange them for the blue ones I ordered."
+  gold_route: returns
+  gold_urgent: false
+  gold_frustration: 0
+- id: T08
+  subject: "Bulk discount for 20 chairs?"
+  body: "Hi, we're furnishing a small office and need 20 of your dining chairs. Is there a bulk or volume discount? What would the total be with delivery?"
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T09
+  subject: "Subscription charged after I cancelled"
+  body: "I cancelled my monthly delivery subscription in October, but I was just charged $29.99 again in November. Please cancel it properly and refund the charge."
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 1
+- id: T10
+  subject: "App crashes on login"
+  body: "Every time I open the app and try to log in it crashes back to the home screen. I have reinstalled it twice. Phone is up to date. Please fix this, I can't access my orders."
+  gold_route: technical
+  gold_urgent: true
+  gold_frustration: 1
+- id: T11
+  subject: "Can I change the delivery address?"
+  body: "I just placed order 5520 but I need it sent to my work address instead of home. Is it too late to change the delivery address?"
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T12
+  subject: "Broken zipper on jacket, want refund"
+  body: "The zipper on the jacket I bought last month broke after two wears. The quality is terrible for the price. I want a full refund, not a repair."
+  gold_route: returns
+  gold_urgent: false
+  gold_frustration: 1
+- id: T13
+  subject: "Invoice missing for my business order"
+  body: "I need a proper VAT invoice for order 6102 for my business records. The confirmation email only had a receipt. Could you send the invoice as a PDF?"
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 0
+- id: T14
+  subject: "Password reset email never arrives"
+  body: "I requested a password reset four times and the email never arrives, not even in spam. I am locked out of my account and my order ships tomorrow."
+  gold_route: technical
+  gold_urgent: true
+  gold_frustration: 1
+- id: T15
+  subject: "Gift card balance wrong"
+  body: "I bought a $100 gift card and the site says the balance is $50. I have only used it once for a $25 purchase. Where did the rest go? Please correct the balance."
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 1
+- id: T16
+  subject: "Do you ship to Canada?"
+  body: "Hi! I live in Toronto and would love to order the linen duvet set. Do you ship to Canada, and if so, how much is shipping and how long does it take?"
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T17
+  subject: "Sofa arrived with a tear in the fabric"
+  body: "Our new sofa arrived today and there is a tear in the fabric on the armrest. We waited six weeks for this delivery and now it is damaged. I am very upset. Please arrange a replacement right away."
+  gold_route: returns
+  gold_urgent: true
+  gold_frustration: 2
+- id: T18
+  subject: "Coupon code not working at checkout"
+  body: "I have a 20% off code from your newsletter but the site says it is invalid when I try to use it. The code is FALL20 and it should be good until the end of the month."
+  gold_route: technical
+  gold_urgent: false
+  gold_frustration: 0
+- id: T19
+  subject: "I was charged for a warranty I didn't buy"
+  body: "My order total includes a $39 extended warranty that I never selected. I did not agree to this. Please remove it and refund the $39."
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 1
+- id: T20
+  subject: "Need help choosing a mattress size"
+  body: "We are looking at your hybrid mattresses and can't decide between queen and king for a 12x14 bedroom. Could someone advise which fits better with two nightstands?"
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T21
+  subject: "Order tracking stuck for 5 days"
+  body: "My order has said 'in transit' for five days with no updates. The delivery date passed yesterday. Where is my package? I need it before the weekend."
+  gold_route: technical
+  gold_urgent: true
+  gold_frustration: 1
+- id: T22
+  subject: "Return window - can I still return?"
+  body: "I bought a rug 35 days ago and it doesn't match my room. Your return window is 30 days. Is there any way to still return it for store credit?"
+  gold_route: returns
+  gold_urgent: false
+  gold_frustration: 0
+- id: T23
+  subject: "Double charge on my credit card"
+  body: "You charged my card twice for the same order, $210 each. My bank flagged it as possible fraud. Fix this today and confirm the refund in writing."
+  gold_route: billing
+  gold_urgent: true
+  gold_frustration: 2
+- id: T24
+  subject: "Trade pricing for interior designers?"
+  body: "I'm an interior designer and would like to know if you offer trade pricing or a designer program. I source furniture for clients regularly."
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T25
+  subject: "The app shows the wrong order total"
+  body: "The app shows my order total as $340 but the website shows $290 for the same cart. Which one is right? I don't want to be overcharged."
+  gold_route: technical
+  gold_urgent: false
+  gold_frustration: 0
+- id: T26
+  subject: "Damaged item - refund not replacement"
+  body: "The mirror arrived shattered. I do NOT want a replacement, I want my money back. This is the second damaged delivery in a row and I have lost all patience."
+  gold_route: returns
+  gold_urgent: true
+  gold_frustration: 2
+- id: T27
+  subject: "When will the out-of-stock chair be back?"
+  body: "The dining chair I want has been out of stock for a month. Do you know when it will be back in stock? I am happy to wait if there is a date."
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T28
+  subject: "Charged for shipping that was supposed to be free"
+  body: "Your site promised free shipping over $75 and my order was $120, but I was charged $12.95 for shipping. Please refund the shipping charge."
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 0
+- id: T29
+  subject: "Cannot add items to cart"
+  body: "Every time I click add to cart the button spins and nothing happens. I have tried two browsers and cleared my cache. I have been trying for an hour and I am about to give up and shop elsewhere."
+  gold_route: technical
+  gold_urgent: true
+  gold_frustration: 2
+- id: T30
+  subject: "Exchange for a different size"
+  body: "The throw blanket I ordered is too small for my bed. Can I exchange it for the larger size? I have the receipt and the tags are still on."
+  gold_route: returns
+  gold_urgent: false
+  gold_frustration: 0
+- id: T31
+  subject: "Late fee on my account I don't understand"
+  body: "There is a $15 late fee on my account but I paid my balance in full on time. Can someone explain where this fee came from and remove it if it is an error?"
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 0
+- id: T32
+  subject: "Looking for a matching nightstand"
+  body: "I bought the oak bed frame last year and now I want a matching nightstand. Do you still make the same oak nightstand, and does it come in two heights?"
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T33
+  subject: "Delivery driver left package in the rain"
+  body: "The driver left my package on the porch in pouring rain and the box is soaked through. The contents might be ruined. This is not acceptable delivery."
+  gold_route: technical
+  gold_urgent: false
+  gold_frustration: 1
+- id: T34
+  subject: "Refund for cancelled order not processed"
+  body: "I cancelled my order within an hour of placing it and got a confirmation, but my card was still charged and no refund has been issued after a week. I need this resolved."
+  gold_route: billing
+  gold_urgent: true
+  gold_frustration: 1
+- id: T35
+  subject: "Curtains are the wrong colour"
+  body: "I ordered the curtains in sage green but they arrived in a grey-blue shade that clashes with everything. I want to send them back and get the right colour."
+  gold_route: returns
+  gold_urgent: false
+  gold_frustration: 0
+- id: T36
+  subject: "Is the floor lamp dimmable?"
+  body: "Before I buy, can you tell me if the arc floor lamp is dimmable and what kind of bulb it takes? I couldn't find this on the product page."
+  gold_route: sales
+  gold_urgent: false
+  gold_frustration: 0
+- id: T37
+  subject: "Account locked after too many attempts"
+  body: "My account is locked after too many login attempts and the unlock email is not coming through. I cannot place my order and the sale ends tonight. Please unlock it now."
+  gold_route: technical
+  gold_urgent: true
+  gold_frustration: 1
+- id: T38
+  subject: "I keep getting marketing emails after unsubscribing"
+  body: "I unsubscribed from your marketing emails three times and I am still getting them every day. Please remove me from your list properly."
+  gold_route: technical
+  gold_urgent: false
+  gold_frustration: 1
+- id: T39
+  subject: "Store credit never applied to my order"
+  body: "I had $40 of store credit from a previous return and it did not apply at checkout even though I selected it. My card was charged the full amount. Please apply the credit and refund the difference."
+  gold_route: billing
+  gold_urgent: false
+  gold_frustration: 1
+- id: T40
+  subject: "Want to return a gift, no receipt"
+  body: "I received a vase as a gift and would like to exchange it, but I don't have the receipt. Is an exchange possible without a receipt, maybe for store credit?"
+  gold_route: returns
+  gold_urgent: false
+  gold_frustration: 0

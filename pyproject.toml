@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-fast-decider"
+version = "0.1.0"
+description = "Support-ticket triage agent with a fast System-1 decision layer in the spirit of Strands Decider v2: a small decision model routes, flags urgency, and scores frustration in milliseconds with calibrated confidence, and only low-confidence tickets escalate to the big LLM."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["litellm", "pyyaml"]
+
+[project.optional-dependencies]
+real = ["strands-decider"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
