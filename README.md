@@ -6,7 +6,7 @@ frustration in milliseconds with calibrated confidence — and only
 low-confidence tickets escalate to the big LLM.**
 
 Inspired by [Strands Decider](https://github.com/strands-labs/strands-decider)
-(Apache 2.0) and Haibo Ding's announcement of Decider v2.
+(Apache 2.0).
 
 ## The pain
 
